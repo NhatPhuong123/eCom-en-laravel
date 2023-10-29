@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +21,13 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/logout', function (Request $request) {
+    $request->session()->forget('user');
+    // Session::forget('user');
+    return redirect('login');
+});
+
 Route::post("/login",[UserController::class,'login']);
 Route::get("/",[ProductController::class,'index']);
+Route::get("/detail/{id}",[ProductController::class,'detail']);
+Route::post("/add_to_cart",[ProductController::class,'addToCart']);
