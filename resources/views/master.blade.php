@@ -25,7 +25,7 @@
             height: 400px !important;
         }
         .custom-product{
-            height: 600px;
+            /* height: 600px; */
         }
         .slide-text{
             background-color: #2c352c24 !important;
@@ -42,6 +42,11 @@
         }
         .detail-img{
             height: 200px;
+        }
+        .cart-list-devider{
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
         }
     </style>
 </html>

@@ -26,7 +26,7 @@ if(Session::has('user'))
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">cart({{$total}})</a></li>
+        <li><a href="/cartlist">cart({{$total}})</a></li>
         @if(Session::has('user'))
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">{{Session::get('user')['name']}}</a>
